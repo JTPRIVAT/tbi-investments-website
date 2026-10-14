@@ -102,3 +102,29 @@
   .legal-section h2{font-size:23px;line-height:1.35}
   .legal-section p{font-size:16px;line-height:1.8}
 }
+
+/* Text-led controls: dark jade surfaces, with the existing layout and brand. */
+:root{--control-bg:#173c35;--control-hover:#205246;--control-border:#537f6d}
+.primary-link,.contact-link,.contact-circle{
+  min-height:44px;min-width:44px;background:var(--control-bg);color:var(--text);
+  border:1px solid var(--control-border);font-weight:600;
+  transition:background .18s,border-color .18s,box-shadow .18s;
+}
+.primary-link{justify-content:center;gap:0;padding:16px 24px;font-size:13px;line-height:1.4}
+.contact-link{justify-content:center;gap:0;font-size:12px}
+.contact-circle{font-size:16px;line-height:1.4;box-shadow:none}
+.primary-link:hover,.contact-link:hover,.contact-circle:hover{
+  background:var(--control-hover);border-color:var(--accent);color:var(--text);transform:none;box-shadow:none;
+}
+.primary-link:active,.contact-link:active,.contact-circle:active{background:#12322d}
+.primary-link:focus-visible,.contact-link:focus-visible,.contact-circle:focus-visible,
+.text-link:focus-visible,.back-top:focus-visible,.motion-toggle:focus-visible,.mobile-menu summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:4px;
+}
+.text-link{gap:0;min-height:44px;min-width:44px;transition:color .18s,border-color .18s}
+.text-link:hover{gap:0;border-color:var(--accent)}
+.back-top{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:10px 12px;font-size:12px;line-height:1.4;white-space:nowrap;border:1px solid var(--line);border-radius:4px;color:var(--accent)}
+.back-top:hover{background:var(--control-bg);border-color:var(--control-border)}
+.motion-icon{display:none}
+.header .mobile-menu summary::after,.header .mobile-menu[open] summary::after{content:none}
+@media(max-width:768px){.contact-circle{font-size:12px}.primary-link{min-height:48px}}
